@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,230 +7,263 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <HorizontalScrollView
-        android:id="@+id/input_hsv"
+    <EditText
+        android:background="@drawable/ip_op_background"
+        android:id="@+id/input_box"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@color/cardview_dark_background"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="@dimen/_50dp"
+        android:layout_marginTop="@dimen/_50dp"
+        android:inputType="text"
+        android:maxLength="10000"
+        android:padding="@dimen/_10dp"
+        android:singleLine="true"
+        android:text="sdfdkj"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sp" />
 
-        <EditText
-            android:id="@+id/input_box"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/_50dp"
-            android:inputType="text"
-            android:maxLength="10000"
-            android:padding="@dimen/_10dp"
-            android:singleLine="true"
-            android:textAlignment="textEnd"
-            android:textSize="@dimen/_55sp" />
-
-
-    </HorizontalScrollView>
-
-    <HorizontalScrollView
-        android:id="@+id/result_hsv"
+    <TextView
+        android:background="@drawable/ip_op_background"
+        android:id="@+id/result_tv"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/input_hsv">
+        android:layout_height="@dimen/_50dp"
+        android:layout_below="@+id/input_box"
+        android:layout_marginTop="@dimen/_10dp"
+        android:padding="@dimen/_10dp"
+        android:singleLine="true"
+        android:text="sdfhdaskhfkjasdhf" />
 
-        <TextView
-            android:id="@+id/result_tv"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_50dp"
-            android:layout_marginTop="@dimen/_10dp"
-            android:padding="@dimen/_10dp"
-            android:singleLine="true" />
-    </HorizontalScrollView>
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/result_hsv">
+        android:layout_above="@id/table"
+        android:layout_below="@id/result_tv"
+        android:textColor="@color/gray" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="@dimen/_20dp"
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
+
             <TableRow
+
                 android:id="@+id/first_row"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
                 >
+
                 <Button
+                    style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="back"
-                    />
+                    android:text="Del"
+                    android:backgroundTint="@color/red"
+                    android:background="@drawable/button_circle"/>
+
                 <Button
+                    android:backgroundTint="@color/blue"
+                    android:background="@drawable/button_circle"
+                    style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="("
-                    />
+                    android:text="(" />
+
                 <Button
+
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text=")"
-                    />
+                    style="@style/padding_margins"
+                    android:text=")" />
+
                 <Button
+                    style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="mod"
-                    />
+                    android:text="mod" />
+
                 <Button
+                    style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="pie"
-                    />
+                    android:text="pie" />
             </TableRow>
+
             <TableRow
                 android:id="@+id/second_row"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
                 >
+
                 <Button
+                    style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="7"
-                    />
+                    android:text="7" />
+
                 <Button
+                    style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="8"
-                    />
+                    android:text="8" />
+
                 <Button
+                    style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="9"
-                    />
+                    android:text="9" />
+
                 <Button
+                    style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="/"
-                    />
+                    android:text="/" />
+
                 <Button
+                    style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="root"
-                    />
+                    android:text="root" />
             </TableRow>
+
             <TableRow
                 android:id="@+id/third_row"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
                 >
+
+                <Button
+                    style="@style/padding_margins"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="4" />
+
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="4"
-                    />
+                    android:text="5" />
+
                 <Button
+                    style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="5"
-                    />
+                    android:text="6" />
+
                 <Button
+                    style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="6"
-                    />
+                    android:text="x" />
+
                 <Button
+                    style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="x"
-                    />
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:text="x^2"
-                    />
+                    android:text="x^2" />
             </TableRow>
+
             <TableRow
                 android:id="@+id/fourth_row"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
                 >
+
                 <Button
+                    style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="1"
-                    />
+                    android:text="1" />
+
                 <Button
+                    style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="2"
-                    />
+                    android:text="2" />
+
                 <Button
+                    style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="3"
-                    />
+                    android:text="3" />
+
                 <Button
+                    style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="-"
-                    />
+                    android:text="-" />
+
                 <Button
+                    style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="+"
-                    />
+                    android:text="+" />
             </TableRow>
+
             <TableRow
                 android:id="@+id/fifth_row"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
                 >
+
                 <Button
+                    style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="0.5"
-                    android:text="0"
-                    />
+                    android:text="0" />
+
                 <Button
+                    style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="0.5"
-                    android:text="."
-                    />
+                    android:text="." />
+
                 <Button
+                    style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="0.5"
-                    android:text="%"
-                    />
+                    android:text="%" />
+
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="Enter"
-                    />
+                    android:text="Enter" />
             </TableRow>
         </TableLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
