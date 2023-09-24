@@ -8,11 +8,11 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:background="@drawable/ip_op_background"
         android:id="@+id/input_box"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50dp"
         android:layout_marginTop="@dimen/_50dp"
+        android:background="@drawable/ip_op_background"
         android:inputType="text"
         android:maxLength="10000"
         android:padding="@dimen/_10dp"
@@ -23,12 +23,12 @@
         android:textSize="@dimen/_20sp" />
 
     <TextView
-        android:background="@drawable/ip_op_background"
         android:id="@+id/result_tv"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50dp"
         android:layout_below="@+id/input_box"
         android:layout_marginTop="@dimen/_10dp"
+        android:background="@drawable/ip_op_background"
         android:padding="@dimen/_10dp"
         android:singleLine="true"
         android:text="sdfhdaskhfkjasdhf" />
@@ -41,16 +41,15 @@
         android:textColor="@color/gray" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:padding="@dimen/_20dp"
         android:id="@+id/table"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/_20dp">
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="match_parent">
 
             <TableRow
 
@@ -61,32 +60,35 @@
                 >
 
                 <Button
+                    android:id="@+id/ac"
                     style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="Del"
+                    android:background="@drawable/button_circle"
                     android:backgroundTint="@color/red"
-                    android:background="@drawable/button_circle"/>
+                    android:text="Del" />
 
                 <Button
-                    android:backgroundTint="@color/blue"
-                    android:background="@drawable/button_circle"
+                    android:id="@+id/first_bracket_open"
                     style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
+                    android:background="@drawable/button_circle"
+                    android:backgroundTint="@color/blue"
                     android:text="(" />
 
                 <Button
-
+                    android:id="@+id/first_bracket_close"
+                    style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    style="@style/padding_margins"
                     android:text=")" />
 
                 <Button
+                    android:id="@+id/mod"
                     style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
@@ -94,6 +96,7 @@
                     android:text="mod" />
 
                 <Button
+                    android:id="@+id/pie"
                     style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
@@ -109,6 +112,7 @@
                 >
 
                 <Button
+                    android:id="@+id/seven"
                     style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
@@ -116,6 +120,7 @@
                     android:text="7" />
 
                 <Button
+                    android:id="@+id/eight"
                     style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
@@ -123,6 +128,7 @@
                     android:text="8" />
 
                 <Button
+                    android:id="@+id/nine"
                     style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
@@ -130,6 +136,7 @@
                     android:text="9" />
 
                 <Button
+                    android:id="@+id/divide"
                     style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
@@ -137,6 +144,7 @@
                     android:text="/" />
 
                 <Button
+                    android:id="@+id/root"
                     style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
@@ -152,6 +160,7 @@
                 >
 
                 <Button
+                    android:id="@+id/four"
                     style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
@@ -159,12 +168,14 @@
                     android:text="4" />
 
                 <Button
+                    android:id="@+id/five"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:text="5" />
 
                 <Button
+                    android:id="@+id/six"
                     style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
@@ -172,6 +183,7 @@
                     android:text="6" />
 
                 <Button
+                    android:id="@+id/multiply"
                     style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
@@ -179,6 +191,7 @@
                     android:text="x" />
 
                 <Button
+                    android:id="@+id/square"
                     style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
@@ -194,6 +207,7 @@
                 >
 
                 <Button
+                    android:id="@+id/one"
                     style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
@@ -201,6 +215,7 @@
                     android:text="1" />
 
                 <Button
+                    android:id="@+id/two"
                     style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
@@ -208,6 +223,7 @@
                     android:text="2" />
 
                 <Button
+                    android:id="@+id/three"
                     style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
@@ -215,6 +231,7 @@
                     android:text="3" />
 
                 <Button
+                    android:id="@+id/minus"
                     style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
@@ -222,6 +239,7 @@
                     android:text="-" />
 
                 <Button
+                    android:id="@+id/plus"
                     style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
@@ -237,6 +255,7 @@
                 >
 
                 <Button
+                    android:id="@+id/zero"
                     style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
@@ -244,6 +263,7 @@
                     android:text="0" />
 
                 <Button
+                    android:id="@+id/dot"
                     style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
@@ -251,6 +271,7 @@
                     android:text="." />
 
                 <Button
+                    android:id="@+id/percent"
                     style="@style/padding_margins"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
@@ -258,6 +279,7 @@
                     android:text="%" />
 
                 <Button
+                    android:id="@+id/enter"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
